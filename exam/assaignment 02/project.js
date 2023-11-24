@@ -90,7 +90,7 @@ const displayProductDetails = (productList) => {
 };
 // 404 page
 const display404Data =(productList) =>{
-    console.log(productList);
+    // console.log(productList);
     const displayContainer = document.getElementById("displayContainer");
 
     const card = document.createElement("div");
