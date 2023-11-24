@@ -21,16 +21,18 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <img src="./static/Logo.png" alt="">
+                    <a href="index.html">
+                        <img src="./static/Logo.png" alt="Home">
+                    </a>
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Sort By View</a>
+                        <li class="nav-item btn btn-warning">
+                            <a class="nav-link text-white" id="sortByViews" href="#"></a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                            <li class="nav-item btn btn-danger">
+                                <a class="nav-link text-white"   href="#">Blog</a>
                             </li>
                         </ul>
                     </form>
@@ -41,21 +43,56 @@
 
     <!-- Header End -->
     <!-- main section -->
-    <div class="container my-5">
-        <p class="d-inline-flex  gap-1">
-            <a class="btn btn-primary w-100" data-bs-toggle="collapse" href="#collapseExample" role="button"
+    <div class="container py-3">
+        <p class="">
+            <button class="w-100 text-start btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
                 aria-expanded="false" aria-controls="collapseExample">
                 Discuss the scope of var, let, and const
-            </a>
+            </button>
         </p>
         <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when
-                the user activates the relevant trigger.
+            <div class="card card-body my-2">
+                The scope of variables in JavaScript is determined by the type of declaration used: var, let, or const.
+                <b>Var:</b> Variables declared with var have either global scope or function scope. This means that they can be accessed from anywhere within the global scope or from within the function in which they are declared.
+                <ul>
+                    <li>
+                        <b>Global scope:</b>  Variables declared outside of any function have global scope. This means that they can be accessed from anywhere in the program, including from within any function.
+                    </li>
+                    <li>
+                        <b> Function scope:</b> Variables declared inside of a function have function scope. This means that they can only be accessed from within the function in which they are declared.
+                    </li>
+                </ul>
+                <b>Let:</b>Variables declared with let have block scope. This means that they can only be accessed from within the block in which they are declared. A block is a portion of code surrounded by curly braces {}, such as a function body, an if statement, or a for loop.
+                <b>const:</b>Variables declared with const also have block scope, but they are also immutable. This means that they cannot be reassigned after they are declared.
+            </div>
+        </div>
+        <p class="">
+            <button class="w-100 text-start btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2"
+                aria-expanded="false" aria-controls="collapseExample2">
+                Tell us the use cases of null and undefined
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample2">
+            <div class="card card-body my-2">
+                <b>Null: </b>
+                The null value in JavaScript represents the intentional absence of a value. It's used to indicate that a variable or object doesn't hold any meaningful data.
+
+                <b>Undefined: </b> The undefined value in JavaScript indicates that a variable or property has not been assigned a value yet. It represents the lack of initialization.
+            </div>
+        </div>
+        <p class="">
+            <button class="w-100 text-start btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample3"
+                aria-expanded="false" aria-controls="collapseExample3">
+                What do you mean by REST API?
+            </button>
+        </p>
+        <div class="collapse " id="collapseExample3">
+            <div class="card card-body my-2">
+                REST API stands for Representational State Transfer Application Programming Interface. It's an architectural style for designing networked applications, emphasizing statelessness, a client-server model, and a uniform interface. RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources identified by URIs, making them widely used for building web services and facilitating communication between different systems over the internet.
             </div>
         </div>
     </div>
-    
+
     <!-- script -->
     <script src="./project.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
